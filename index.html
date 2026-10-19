@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Meri Kuchu Puchu Ke 17 Surprises ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --rose-deep: #b51749;
+      --rose-main: #ff4d79;
+      --rose-soft: #ff8fa3;
+      --blush-bg: #fff5f7;
+      --card-bg: rgba(255, 255, 255, 0.95);
+      --gold: #d4af37;
+      --text-dark: #2d1b22;
+      --text-muted: #6e555f;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; -webkit-tap-highlight-color: transparent; }
+
+    body {
+      background: radial-gradient(circle at top left, #ffe5ec 0%, #ffc2d1 45%, #ffe8d6 100%);
+      background-attachment: fixed;
+      min-height: 100vh;
+      color: var(--text-dark);
+      padding: 16px 12px 80px;
+      overflow-x: hidden;
+    }
+
+    /* Particle Background for Thousands of Animations */
+    #particle-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .sticky-bar {
+      position: sticky;
+      top: 10px;
+      z-index: 100;
+      max-width: 480px;
+      margin: 0 auto 16px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+      border: 2px solid var(--rose-soft);
+      border-radius: 999px;
+      padding: 10px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 10px 25px rgba(181, 23, 73, 0.15);
+    }
+
+    .sticky-title { font-size: 0.85rem; font-weight: 800; color: var(--rose-deep); }
+    .counter-pill { background: linear-gradient(135deg, var(--rose-main), var(--rose-deep)); color: white; padding: 4px 12px; border-radius: 999px; font-size: 0.8rem; font-weight: 800; transition: transform 0.3s ease; }
+
+    .container { max-width: 480px; margin: 0 auto; position: relative; z-index: 10; }
+
+    .glass-card {
+      background: var(--card-bg);
+      backdrop-filter: blur(16px);
+      border-radius: 28px;
+      padding: 24px 20px;
+      margin-bottom: 18px;
+      border: 1.5px solid rgba(255, 255, 255, 0.9);
+      box-shadow: 0 16px 40px rgba(181, 23, 73, 0.12);
+      text-align: center;
+      animation: popIn 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.94) translateY(10px); opacity: 0; }
+      100% { transform: scale(1) translateY(0); opacity: 1; }
+    }
+
+    .cursive-title {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2.3rem;
+      color: var(--rose-deep);
+      margin-bottom: 6px;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #ffe0e9;
+      color: var(--rose-deep);
+      font-size: 0.76rem;
+      font-weight: 800;
+      padding: 5px 13px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .human-text {
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+    }
+
+    .section-head {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+
+    .hint-text {
+      font-size: 0.8rem;
+      color: var(--rose-main);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    /* Surprise 1: Envelope */
+    .envelope-box {
+      background: linear-gradient(135deg, #fff0f3, #ffe5ec);
+      border: 2px dashed var(--rose-soft);
+      border-radius: 20px;
+      padding: 18px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .envelope-box:hover { transform: translateY(-3px); }
+
+    .letter-content {
+      display: none;
+      text-align: left;
+      background: white;
+      padding: 16px;
+      border-radius: 16px;
+      margin-top: 12px;
+      font-size: 0.92rem;
+      line-height: 1.65;
+      border-left: 4px solid var(--rose-main);
+      animation: revealAnim 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    @keyframes revealAnim {
+      0% { opacity: 0; transform: translateY(-10px) scale(0.97); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* Surprise 2 & 3 */
+    .emoji-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .emoji-card {
+      background: var(--blush-bg);
+      border: 2px solid #ffd1dc;
+      border-radius: 20px;
+      padding: 16px 12px;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .emoji-card.unlocked {
+      background: #ffffff;
+      border-color: var(--rose-main);
+      box-shadow: 0 8px 20px rgba(255, 77, 121, 0.15);
+      transform: translateY(-3px);
+    }
+
+    .big-emoji { font-size: 2.5rem; margin-bottom: 6px; display: block; }
+    .emoji-secret {
+      display: none;
+      font-size: 0.83rem;
+      color: var(--text-dark);
+      line-height: 1.45;
+      margin-top: 8px;
+      padding-top: 8px;
+      border-top: 1px dashed #ffc2d1;
+      animation: revealAnim 0.4s ease;
+    }
+
+    /* Surprise 4: Proper Dustbin Animation Area */
+    .trash-area {
+      background: #fff8f9;
+      border-radius: 18px;
+      padding: 18px;
+      border: 1.5px solid #ffd6e0;
+      margin-top: 14px;
+      position: relative;
+      overflow: hidden;
+      min-height: 130px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .dustbin-container {
+      font-size: 2.8rem;
+      margin-top: 6px;
+      transition: transform 0.3s ease;
+    }
+
+    .flying-msg-animated {
+      position: absolute;
+      background: #2b2d42;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      animation: throwIntoBin 0.8s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    }
+
+    @keyframes throwIntoBin {
+      0% { transform: translateY(40px) scale(1) rotate(0deg); opacity: 1; }
+      50% { transform: translateY(-20px) scale(0.8) rotate(-15deg); opacity: 0.9; }
+      100% { transform: translateY(-65px) scale(0.2) rotate(45deg); opacity: 0; }
+    }
+
+    /* Action Buttons */
+    .action-btn {
+      width: 100%;
+      background: white;
+      border: 2px solid var(--rose-soft);
+      color: var(--rose-deep);
+      padding: 13px 16px;
+      border-radius: 16px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.2s;
+    }
+    .action-btn:hover { background: var(--blush-bg); transform: scale(1.01); }
+
+    .action-output {
+      display: none;
+      background: #fff0f5;
+      padding: 12px 14px;
+      border-radius: 14px;
+      font-size: 0.86rem;
+      text-align: left;
+      margin-bottom: 12px;
+      line-height: 1.5;
+      color: var(--text-dark);
+      animation: revealAnim 0.4s ease;
+    }
+
+    /* Meter */
+    .meter-wrap {
+      background: #f1e4e8;
+      height: 14px;
+      border-radius: 999px;
+      overflow: hidden;
+      margin: 10px 0 6px;
+    }
+    .meter-fill {
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, #ff758f, #c9184a);
+      transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1), background 0.6s ease;
+    }
+
+    /* Mystery Grid (8-14) */
+    .mystery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .mystery-box {
+      background: linear-gradient(135deg, #fff9fb 0%, #ffe3ec 100%);
+      border: 1.5px solid #ffb3c6;
+      border-radius: 18px;
+      padding: 14px 10px;
+      cursor: pointer;
+      min-height: 95px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.3s ease;
+    }
+    .mystery-box:hover { transform: translateY(-2px); border-color: var(--rose-main); }
+    .mystery-box.opened {
+      background: white;
+      border-color: #2b9348;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+      animation: revealAnim 0.4s ease;
+    }
+    .mystery-title { font-size: 0.82rem; font-weight: 800; color: var(--rose-deep); margin-top: 4px; }
+    .mystery-reveal { display: none; font-size: 0.82rem; color: var(--text-dark); line-height: 1.4; font-weight: 600; }
+
+    /* Mirror */
+    .mirror-card {
+      background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+      border: 3px solid #eab676;
+      border-radius: 22px;
+      padding: 18px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: transform 0.3s ease;
+    }
+    .mirror-card:hover { transform: scale(1.02); }
+
+    /* Final Buttons */
+    .final-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+      margin-top: 16px;
+      position: relative;
+      min-height: 115px;
+    }
+
+    .btn-forgive {
+      background: linear-gradient(135deg, #ff4d79, #b51749);
+      color: white;
+      border: none;
+      width: 100%;
+      padding: 16px 24px;
+      border-radius: 999px;
+      font-size: 1.05rem;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 10px 25px rgba(181, 23, 73, 0.35);
+      transition: transform 0.2s ease;
+    }
+    .btn-forgive:hover { transform: scale(1.03); }
+
+    .btn-anger {
+      background: #f3e8eb;
+      color: #6e555f;
+      border: none;
+      padding: 11px 20px;
+      border-radius: 999px;
+      font-size: 0.88rem;
+      font-weight: 700;
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.2s ease;
+    }
+
+    .vachan-box {
+      display: none;
+      background: linear-gradient(135deg, #fffdf9, #fff0f5);
+      border: 2px solid var(--gold);
+      border-radius: 22px;
+      padding: 20px 16px;
+      margin-top: 18px;
+      text-align: left;
+      animation: revealAnim 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .vachan-list { padding-left: 18px; font-size: 0.9rem; line-height: 1.7; margin: 10px 0; }
+
+    .floating-petal {
+      position: fixed;
+      pointer-events: none;
+      z-index: 999;
+      animation: floatUp 3.5s linear forwards;
+    }
+
+    @keyframes floatUp {
+      0% { transform: translateY(0) rotate(0deg) scale(0.6); opacity: 1; }
+      100% { transform: translateY(-115vh) rotate(360deg) scale(1.4); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Particle Animation Canvas for Thousands of Animations -->
+  <canvas id="particle-canvas"></canvas>
+
+  <div class="sticky-bar">
+    <span class="sticky-title">✨ Kuchu Puchu Ke Surprises</span>
+    <span class="counter-pill" id="counterPill">0 / 17 Khule 🎁</span>
+  </div>
+
+  <div class="container">
+    <div class="glass-card">
+      <span class="badge">💌 Dil Se Likha Ek Paigaam</span>
+      <h1 class="cursive-title">Meri Pyari Kuchu Puchu ❤️</h1>
+      <p class="human-text">Yaar Kuchu Puchu, jab se tum mujhse naraz hui ho na, sach mein kisi cheez mein mann nahi lag raha. Isliye maine tumhare liye yeh <b>17 animated surprises</b> banaye hain. Ek-ek karke tap karo na please? 🥺</p>
+      
+      <div class="envelope-box" onclick="unlockSurprise(1, 'letter1', 'envTitle1')">
+        <div id="envTitle1" style="font-weight: 800; color: var(--rose-deep); font-size: 0.95rem;">💌 Surprise #1: Mere Dil Ki Asli Baat (Tap Karke Kholo)</div>
+        <div class="letter-content" id="letter1">
+          <b>Meri Jaan Kuchu Puchu,</b><br><br>
+          Tumhe laga ki mere dost ne jab woh gandi baat likhi, toh main khush ho gaya aur phool bhej diya. Par kasam se aisa bilkul nahi hai! <br><br>
+          Internet par jab koi bekaar baat bolta hai, toh log <b>🥀 (murjhaya phool)</b> bhejte hain jiska matlab hota hai: <i>"Chhee bhai, mood mat kharab kar, mujhe koi interest nahi hai."</i><br><br>
+          Meri zindagi aur mera pyar sirf tumse hai! ❤️
+        </div>
+      </div>
+    </div>
+
+    <div class="glass-card">
+      <div class="section-head">🔍 Do Phoolon Ka Asli Farq</div>
+      <div class="hint-text">Tap karke Surprise #2 aur #3 kholo 👇</div>
+      <div class="emoji-grid">
+        <div class="emoji-card" id="card2" onclick="unlockEmojiCard(2, 'card2', 'sec2')">
+          <span class="big-emoji">🥀</span>
+          <strong style="font-size: 0.86rem;">Surprise #2:<br>Murjhaya Phool</strong>
+          <div class="emoji-secret" id="sec2"><b>Matlab:</b> "Bakwaas band kar / I don't care." Yeh uski baat chup karane ke liye bheja tha!</div>
+        </div>
+        <div class="emoji-card" id="card3" onclick="unlockEmojiCard(3, 'card3', 'sec3')">
+          <span class="big-emoji">🌹</span>
+          <strong style="font-size: 0.86rem;">Surprise #3:<br>Khilta Lal Gulab</strong>
+          <div class="emoji-secret" id="sec3"><b>Matlab:</b> Asli Pyar! Aur is par sirf meri <b>Kuchu Puchu</b> ka haq hai! ❤️</div>
+        </div>
+      </div>
+
+      <!-- Proper Dustbin Animation Area -->
+      <div class="trash-area" id="trashArea">
+        <p style="font-size: 0.85rem; font-weight: 700; margin-bottom: 6px;">🎁 Surprise #4: Dost Ke Faltu Message Ko Udaao</p>
+        <button class="action-btn" style="margin-bottom:6px; justify-content:center;" onclick="throwInTrash()"><span id="trashText">🗑️ Tap Karke Message Ko Kachre Mein Phenko!</span></button>
+        <div class="dustbin-container" id="dustbinIcon">🗑️</div>
+      </div>
+    </div>
+
+    <div class="glass-card">
+      <div class="section-head">🩺 Kuchu Puchu Ka Live Test Center</div>
+      <div class="hint-text">Surprise #5, #6 aur #7 Yahan Hain 👇</div>
+      <div style="text-align: left; margin-bottom: 14px;">
+        <div style="display: flex; justify-content: space-between; font-size: 0.82rem; font-weight: 800;">
+          <span>😤 Gussa Meter:</span>
+          <span id="angerLabel">100% (Laal Tamatar 🍅)</span>
+        </div>
+        <div class="meter-wrap"><div class="meter-fill" id="angerFill"></div></div>
+      </div>
+      <button class="action-btn" onclick="unlockAction(5, 'xrayOut')"><span>💓 Surprise #5: Mere Dil Ka Live X-Ray Karo</span><span>👉</span></button>
+      <div class="action-output" id="xrayOut">✅ <b>Dil Ki Dhadkan:</b> Sirf Kuchu-Puchu bol rahi hai.<br>✅ <b>Pyar:</b> 9999.9% ♾️<br>❌ <b>Dost Ki Baat:</b> 0.00%</div>
+      <button class="action-btn" onclick="doSitup()"><span>🙇‍♂️ Surprise #6: Kaan Pakad Ke Sorry Bulwao</span><span id="situpBadge" style="background:#ffe0e9; padding:2px 10px; border-radius:99px;">0 Baar</span></button>
+      <div class="action-output" id="situpOut">🥺 <i>"Kaan pakad ke sorry meri Kuchu Puchu! Ab muskura do!"</i></div>
+      <button class="action-btn" onclick="meltAnger()"><span>🪄 Surprise #7: Gussa Pighlane Wala Jadoo Button</span><span>✨</span></button>
+      <div class="action-output" id="magicOut">🥰 Jadoo chal gaya! Gussa meter pighal kar zero ho raha hai!</div>
+    </div>
+
+    <div class="glass-card">
+      <div class="section-head">🎁 7 Chhupe Hue Pitare (Surprises #8 - #14)</div>
+      <div class="hint-text">Har dabbe par tap karo!</div>
+      <div class="mystery-grid">
+        <div class="mystery-box" id="mbox8" onclick="openBox(8)"><div id="mclose8"><span style="font-size:1.8rem;">🎀</span><div class="mystery-title">Surprise #8</div></div><div class="mystery-reveal" id="mrev8">😊 <b>Tumhari Hasi:</b> Mera poora din bana deti hai.</div></div>
+        <div class="mystery-box" id="mbox9" onclick="openBox(9)"><div id="mclose9"><span style="font-size:1.8rem;">🍅</span><div class="mystery-title">Surprise #9</div></div><div class="mystery-reveal" id="mrev9">🥰 <b>Cute Gussa:</b> Gusse mein tum laal tamatar jaisi pyari lagti ho!</div></div>
+        <div class="mystery-box" id="mbox10" onclick="openBox(10)"><div id="mclose10"><span style="font-size:1.8rem;">🏡</span><div class="mystery-title">Surprise #10</div></div><div class="mystery-reveal" id="mrev10">🫂 <b>Mera Sukoon:</b> Thakaan sirf tumhare paas khatam hoti hai.</div></div>
+        <div class="mystery-box" id="mbox11" onclick="openBox(11)"><div id="mclose11"><span style="font-size:1.8rem;">🍕</span><div class="mystery-title">Surprise #11</div></div><div class="mystery-reveal" id="mrev11">🍦 <b>Free Food:</b> Aaj manpasand khana + Ice Cream meri taraf se!</div></div>
+        <div class="mystery-box" id="mbox12" onclick="openBox(12)"><div id="mclose12"><span style="font-size:1.8rem;">💆‍♀️</span><div class="mystery-title">Surprise #12</div></div><div class="mystery-reveal" id="mrev12">✨ <b>Royal Massage:</b> 20 Min ka Head & Foot massage mere haathon se!</div></div>
+        <div class="mystery-box" id="mbox13" onclick="openBox(13)"><div id="mclose13"><span style="font-size:1.8rem;">🛍️</span><div class="mystery-title">Surprise #13</div></div><div class="mystery-reveal" id="mrev13">🚗 <b>Shopping Pass:</b> Bina bahane ke Long Drive aur Shopping!</div></div>
+        <div class="mystery-box" id="mbox14" style="grid-column: span 2;" onclick="openBox(14)"><div id="mclose14"><span style="font-size:1.8rem;">👑</span><div class="mystery-title">Surprise #14 (Maharani Special Pass)</div></div><div class="mystery-reveal" id="mrev14">📜 <b>"Kuchu Puchu Sahi Hai":</b> Agli kisi bhi behas mein tumhari jeet pakki! ❤️</div></div>
+      </div>
+    </div>
+
+    <div class="glass-card">
+      <div class="section-head">🪞 Surprise #15: Sach Bolne Wala Aaina</div>
+      <div class="mirror-card" onclick="unlockMirror()">
+        <div id="mirrorFront"><span style="font-size:2.2rem;">✨🪞✨</span><p style="font-size: 0.88rem; font-weight: 800; margin-top:6px;">Tap karke pucho: Sabse pyari biwi kaun hai?</p></div>
+        <div id="mirrorBack" style="display:none;"><span style="font-size:2.3rem;">👸💖</span><p style="font-size:0.95rem; font-weight:800; color:var(--rose-deep); margin-top:6px;">Jawab: "Bina kisi shaq ke—meri Kuchu Puchu!"</p></div>
+      </div>
+    </div>
+
+    <div class="glass-card">
+      <h2 class="cursive-title" style="font-size:2rem;">Ab Toh Maan Jao Na? 🥺</h2>
+      <p class="human-text" style="margin-bottom:8px;">Surprise #16 aur #17 Yahan Hain 👇</p>
+      <div class="final-btns">
+        <button class="btn-forgive" id="yesBtn" onclick="grandFinale()">💖 Surprise #17: Maan Gayi Meri Jaan! 😘</button>
+        <button class="btn-anger" id="noBtn" onmouseover="runAway()" ontouchstart="runAway(); return false;" onclick="runAway()">😤 Surprise #16: Abhi Bhi Gussa Hoon</button>
+      </div>
+      <div class="vachan-box" id="vachanBox">
+        <div style="text-align:center; font-size:3rem; margin-bottom:6px;">🌹👑💖</div>
+        <h3 style="text-align:center; color:var(--rose-deep); font-size:1.3rem; margin-bottom:8px;">I Love You So Much Meri Kuchu Puchu!</h3>
+        <p style="font-size:0.9rem; color:var(--text-muted); text-align:center; margin-bottom:12px;">Yeh raha mera pakka Vachan-Patra:</p>
+        <ul class="vachan-list">
+          <li>🤞 Aaj ke baad aise doston ke messages par koi emoji bhi nahi jayega!</li>
+          <li>🌹 Mere har gulab aur khushi par sirf Kuchu Puchu ka haq hai.</li>
+          <li>🍕 Upar khule saare VIP Treat Coupons aaj se lagu hote hain!</li>
+        </ul>
+        <p style="text-align:center; font-weight:800; color:var(--rose-deep); margin-top:12px; font-size:0.95rem;">Ab jaldi se ek smile do aur gale lag jao! 🤗❤️</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* Thousands of Animations Particle Background Engine */
+    const canvas = document.getElementById('particle-canvas');
+    const ctx = canvas.getContext('2d');
+    let width, height;
+    let particles = [];
+
+    function resize() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resize);
+    resize();
+
+    class Particle {
+      constructor() {
+        this.reset();
+      }
+      reset() {
+        this.x = Math.random() * width;
+        this.y = Math.random() * height;
+        this.size = Math.random() * 2.5 + 0.5;
+        this.speedX = (Math.random() - 0.5) * 0.5;
+        this.speedY = (Math.random() - 0.5) * 0.5 - 0.2;
+        this.opacity = Math.random() * 0.6 + 0.2;
+      }
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        if (this.y < 0 || this.x < 0 || this.x > width) {
+          this.reset();
+          this.y = height + 10;
+        }
+      }
+      draw() {
+        ctx.fillStyle = `rgba(255, 77, 121, ${this.opacity})`;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    for (let i = 0; i < 120; i++) {
+      particles.push(new Particle());
+    }
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, width, height);
+      particles.forEach(p => {
+        p.update();
+        p.draw();
+      });
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+
+    /* Interactive Logic & Animations */
+    const unlockedSet = new Set();
+    let situps = 0, angerLevel = 100, noCount = 0;
+    const cuteExcuses = ["Arey Kuchu Puchu ruk jao! 🥺", "Yeh button chhutti par hai! 🙈", "Itna bhaav mat khao Maharani 👑", "Pink wala button dabao na ❤️", "Pakad ke dikhao! 😜"];
+
+    function markUnlocked(num) {
+      if (!unlockedSet.has(num)) {
+        unlockedSet.add(num);
+        const pill = document.getElementById('counterPill');
+        pill.innerText = unlockedSet.size + ' / 17 Khule 🎁';
+        pill.style.transform = 'scale(1.18)';
+        setTimeout(() => pill.style.transform = 'scale(1)', 250);
+        reduceAnger(6);
+      }
+    }
+
+    function reduceAnger(amount) {
+      angerLevel = Math.max(0, angerLevel - amount);
+      const fill = document.getElementById('angerFill'), label = document.getElementById('angerLabel');
+      fill.style.width = angerLevel + '%';
+      if (angerLevel > 60) label.innerText = angerLevel + '% (Thoda Gussa 😤)';
+      else if (angerLevel > 20) { label.innerText = angerLevel + '% (Pighal Raha Hai 🥺)'; fill.style.background = 'linear-gradient(90deg, #ffbe0b, #fb5607)'; }
+      else { label.innerText = angerLevel + '% (Sirf Pyar 🥰)'; fill.style.background = 'linear-gradient(90deg, #38b000, #70e000)'; }
+    }
+
+    function unlockSurprise(num, c, t) {
+      document.getElementById(c).style.display = 'block';
+      document.getElementById(t).innerHTML = '💌 Surprise #1 Khul Gaya: Mere Dil Ki Baat ❤️';
+      markUnlocked(num);
+      spawnFloatingEmojis(['💌', '❤️', '🥺'], 6);
+    }
+
+    function unlockEmojiCard(num, cardId, secId) {
+      document.getElementById(cardId).classList.add('unlocked');
+      document.getElementById(secId).style.display = 'block';
+      markUnlocked(num);
+      spawnFloatingEmojis(num === 2 ? ['🥀', '🙅‍♂️'] : ['🌹', '❤️', '👑'], 6);
+    }
+
+    /* Proper Dustbin Animation */
+    function throwInTrash() {
+      const area = document.getElementById('trashArea');
+      const bin = document.getElementById('dustbinIcon');
+      
+      bin.style.transform = 'scale(1.3) rotate(15deg)';
+      setTimeout(() => bin.style.transform = 'scale(1) rotate(0deg)', 300);
+
+      const msg = document.createElement('div');
+      msg.className = 'flying-msg-animated';
+      msg.innerText = '💬 "Ganda Message..."';
+      area.appendChild(msg);
+
+      setTimeout(() => {
+        msg.remove();
+        document.getElementById('trashText').innerText = '✅ Message Kachre Mein Safaagya! 🗑️✨';
+      }, 800);
+
+      markUnlocked(4);
+      spawnFloatingEmojis(['🗑️', '✨', '💨'], 5);
+    }
+
+    function unlockAction(num, outId) {
+      document.getElementById(outId).style.display = 'block';
+      markUnlocked(num);
+      spawnFloatingEmojis(['💓', '❤️'], 6);
+    }
+
+    function doSitup() {
+      situps++;
+      document.getElementById('situpBadge').innerText = situps + ' Baar';
+      document.getElementById('situpOut').style.display = 'block';
+      markUnlocked(6);
+      reduceAnger(5);
+      spawnFloatingEmojis(['🙇‍♂️', '🥺', '❤️'], 4);
+    }
+
+    function meltAnger() {
+      document.getElementById('magicOut').style.display = 'block';
+      markUnlocked(7);
+      reduceAnger(35);
+      spawnFloatingEmojis(['🪄', '✨', '🥰'], 8);
+    }
+
+    function openBox(num) {
+      document.getElementById('mbox' + num).classList.add('opened');
+      document.getElementById('mclose' + num).style.display = 'none';
+      document.getElementById('mrev' + num).style.display = 'block';
+      markUnlocked(num);
+      spawnFloatingEmojis(['🎁', '💖', '✨'], 5);
+    }
+
+    function unlockMirror() {
+      document.getElementById('mirrorFront').style.display = 'none';
+      document.getElementById('mirrorBack').style.display = 'block';
+      markUnlocked(15);
+      spawnFloatingEmojis(['🪞', '👸', '💖'], 7);
+    }
+
+    function runAway() {
+      const noBtn = document.getElementById('noBtn');
+      markUnlocked(16);
+      noBtn.innerText = cuteExcuses[noCount % cuteExcuses.length];
+      noCount++;
+      noBtn.style.transform = `translate(${Math.floor(Math.random() * 120) - 60}px, ${Math.floor(Math.random() * 60) - 30}px)`;
+    }
+
+    /* Grand Finale with Massive Hearts Rain */
+    function grandFinale() {
+      markUnlocked(17);
+      reduceAnger(100);
+      document.getElementById('vachanBox').style.display = 'block';
+      document.getElementById('noBtn').style.display = 'none';
+      document.getElementById('yesBtn').innerText = '🥰 Yayyy! Meri Kuchu Puchu Maan Gayi! ❤️';
+      
+      // Intensive heart rain animation
+      spawnFloatingEmojis(['❤️', '💖', '🌹', '🥰', '👑', '✨', '💕', '💘'], 45);
+    }
+
+    function spawnFloatingEmojis(emojis, count) {
+      for (let i = 0; i < count; i++) {
+        setTimeout(() => {
+          const el = document.createElement('div');
+          el.classList.add('floating-petal');
+          el.innerText = emojis[Math.floor(Math.random() * emojis.length)];
+          el.style.left = (Math.random() * 90 + 4) + 'vw';
+          el.style.bottom = '-40px';
+          el.style.fontSize = (Math.random() * 1.2 + 1.2) + 'rem';
+          document.body.appendChild(el);
+          setTimeout(() => el.remove(), 3500);
+        }, i * 80);
+      }
+    }
+  </script>
+</body>
+</html>
